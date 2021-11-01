@@ -1,7 +1,8 @@
-PokerStove
+PokerStove (modernized)
 ==========
 
-[![OpenHUB Metrics](https://www.openhub.net/p/pokerstove/widgets/project_thin_badge.gif)](https://www.openhub.net/p/pokerstove)
+This is a PokerStove fork that removes unnecessary dependencies from the original project and
+provides easy-to-use integration as library via[CPM.cmake](https://github.com/cpm-cmake/CPM.cmake).
 
 PokerStove is a highly hand optimized C++ poker hand evaluation library.  The Win32 Hold'em
 GUI was first released in 2002, and has been available as freeware since
