@@ -8,7 +8,7 @@
 #include <cstdint>
 #include <string>
 
-#include <boost/operators.hpp>
+//#include <boost/operators.hpp>
 
 namespace pokerstove
 {

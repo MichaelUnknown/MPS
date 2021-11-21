@@ -4,10 +4,10 @@
 #ifndef PEVAL_CARDSETGENERATORS_H_
 #define PEVAL_CARDSETGENERATORS_H_
 
-#include <set>
-
 #include <pokerstove/peval/Card.h>
 #include <pokerstove/peval/CardSet.h>
+
+#include <set>
 
 namespace pokerstove
 {

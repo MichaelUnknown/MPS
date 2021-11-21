@@ -2,8 +2,6 @@
  * Copyright (c) 2012 Andrew Prock. All rights reserved.
  * $Id: PokerHandEvaluator_Alloc.cpp 2649 2012-06-30 04:53:24Z prock $
  */
-#include <stdexcept>
-
 #include <pokerstove/peval/BadugiHandEvaluator.h>
 #include <pokerstove/peval/DeuceToSevenHandEvaluator.h>
 #include <pokerstove/peval/DrawHighHandEvaluator.h>
@@ -14,16 +12,15 @@
 #include <pokerstove/peval/StudEightHandEvaluator.h>
 #include <pokerstove/peval/StudHandEvaluator.h>
 #include <pokerstove/peval/UniversalHandEvaluator.h>
-//#include "LowballA5HandEvaluator.h"
-//#include "ThreeCardPokerHandEvaluator.h"
+
+#include <stdexcept>
 
 using namespace std;
-using namespace boost;
 using namespace pokerstove;
 
-boost::shared_ptr<PokerHandEvaluator> PokerHandEvaluator::alloc(const string& strid)
+std::shared_ptr<PokerHandEvaluator> PokerHandEvaluator::alloc(const string& strid)
 {
-    boost::shared_ptr<PokerHandEvaluator> ret;
+    std::shared_ptr<PokerHandEvaluator> ret;
     switch (strid[0])
     {
         case 'h':    //     hold'em

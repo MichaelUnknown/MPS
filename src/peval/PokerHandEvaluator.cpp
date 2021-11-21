@@ -3,12 +3,11 @@
  * $Id: PokerHandEvaluator.cpp 2649 2012-06-30 04:53:24Z prock $
  */
 
-#include <iostream>
-
 #include <pokerstove/peval/PokerHandEvaluator.h>
 
+#include <iostream>
+
 using namespace std;
-using namespace boost;
 using namespace pokerstove;
 
 PokerHandEvaluator::PokerHandEvaluator() : _subclassID("abstract-base-class"), _useSuits(true) {}

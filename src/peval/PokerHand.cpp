@@ -3,15 +3,15 @@
  * $Id: PokerHand.cpp 2649 2012-06-30 04:53:24Z prock $
  */
 
-#include <algorithm>
-#include <cassert>
-#include <stdexcept>
-
 #include <pokerstove/peval/CardSet.h>
 #include <pokerstove/peval/Holdem.h>
 #include <pokerstove/peval/PokerEvaluation.h>
 #include <pokerstove/peval/PokerEvaluationTables.h>
 #include <pokerstove/peval/PokerHand.h>
+
+#include <algorithm>
+#include <cassert>
+#include <stdexcept>
 
 using namespace std;
 using namespace pokerstove;

@@ -5,10 +5,10 @@
 #ifndef PEVAL_POKERHANDEVALUATION_H_
 #define PEVAL_POKERHANDEVALUATION_H_
 
+#include <pokerstove/peval/PokerEvaluation.h>
+
 #include <iostream>
 #include <stdexcept>
-
-#include <pokerstove/peval/PokerEvaluation.h>
 
 namespace pokerstove
 {

@@ -5,13 +5,13 @@
 #ifndef PEVAL_CARDSET_H_
 #define PEVAL_CARDSET_H_
 
+#include <pokerstove/peval/Rank.h>
+#include <pokerstove/peval/Suit.h>
+
 #include <cstdint>
 #include <iosfwd>
 #include <string>
 #include <vector>
-
-#include <pokerstove/peval/Rank.h>
-#include <pokerstove/peval/Suit.h>
 
 namespace pokerstove
 {

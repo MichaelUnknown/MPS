@@ -5,10 +5,11 @@
 #ifndef PEVAL_OMAHAHIGHHANDEVALUATOR_H_
 #define PEVAL_OMAHAHIGHHANDEVALUATOR_H_
 
-#include <boost/math/special_functions/binomial.hpp>
 #include <pokerstove/peval/Holdem.h>
 #include <pokerstove/peval/PokerEvaluationTables.h>
 #include <pokerstove/peval/PokerHandEvaluator.h>
+
+#include <boost/math/special_functions/binomial.hpp>
 
 namespace pokerstove
 {

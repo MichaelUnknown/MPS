@@ -42,7 +42,7 @@ SortUsingDeclarations: true
 SortIncludes: true
 IncludeBlocks: Regroup
 IncludeCategories:
-  - Regex:           '<(mkpoker)\/.*>'
+  - Regex:           '<(pokerstove)\/.*>'
     Priority:        1
   - Regex:           '<([A-Za-z0-9\/\-_])+>'
     Priority:        2

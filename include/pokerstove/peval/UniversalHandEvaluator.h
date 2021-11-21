@@ -16,13 +16,14 @@
 //  eval a: high/low/227/A25/Badugi/3CP
 //  eval b: high/low/227/A25/Badugi/3CP
 
-#include <vector>
-
-#include <boost/lexical_cast.hpp>
 #include <pokerstove/peval/Card.h>
 #include <pokerstove/peval/CardSet.h>
 #include <pokerstove/peval/PokerHandEvaluator.h>
 #include <pokerstove/util/combinations.h>
+
+#include <vector>
+
+#include <boost/lexical_cast.hpp>
 
 namespace pokerstove
 {

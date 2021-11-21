@@ -2,12 +2,13 @@
  * Copyright (c) 2012 Andrew Prock. All rights reserved.
  * $Id: Suit.cpp 2649 2012-06-30 04:53:24Z prock $
  */
+#include <pokerstove/peval/Card.h>
+#include <pokerstove/peval/Suit.h>
+
 #include <iostream>
 #include <stdexcept>
 
 #include <boost/format.hpp>
-#include <pokerstove/peval/Card.h>
-#include <pokerstove/peval/Suit.h>
 
 using namespace std;
 using namespace pokerstove;

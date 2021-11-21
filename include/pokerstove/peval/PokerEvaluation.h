@@ -5,11 +5,12 @@
 #ifndef PEVAL_POKEREVALUATION_H_
 #define PEVAL_POKEREVALUATION_H_
 
+#include <pokerstove/peval/Rank.h>
+
 #include <climits>
 #include <iosfwd>
 
-#include <boost/operators.hpp>
-#include <pokerstove/peval/Rank.h>
+//#include <boost/operators.hpp>
 
 namespace pokerstove
 {

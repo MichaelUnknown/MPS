@@ -19,6 +19,6 @@ macro(package_add_test TESTNAME TESTFILE)
 endmacro()
 
 # actual tests #
-package_add_test(suit_test Suit.test.cpp peval)
-package_add_test(rank_test Rank.test.cpp peval)
-package_add_test(cardset_test CardSet.test.cpp peval)
+package_add_test(suit_test Suit.test.cpp ${PROJECT_NAME}::peval)
+package_add_test(rank_test Rank.test.cpp ${PROJECT_NAME}::peval)
+package_add_test(cardset_test CardSet.test.cpp ${PROJECT_NAME}::peval)

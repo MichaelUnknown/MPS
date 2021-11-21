@@ -3,11 +3,11 @@
  * $Id: Card.cpp 2649 2012-06-30 04:53:24Z prock $
  */
 
-#include <iostream>
-
 #include <pokerstove/peval/Card.h>
 #include <pokerstove/peval/Rank.h>
 #include <pokerstove/peval/Suit.h>
+
+#include <iostream>
 
 using pokerstove::Card;
 using pokerstove::Rank;

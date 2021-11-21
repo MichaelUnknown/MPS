@@ -5,13 +5,14 @@
 #ifndef PEVAL_POKERHANDEVALUATOR_H_
 #define PEVAL_POKERHANDEVALUATOR_H_
 
+#include <pokerstove/peval/CardSet.h>
+#include <pokerstove/peval/PokerHandEvaluation.h>
+
+#include <memory>
 #include <string>
 #include <vector>
 
 #include <boost/lexical_cast.hpp>
-#include <boost/shared_ptr.hpp>
-#include <pokerstove/peval/CardSet.h>
-#include <pokerstove/peval/PokerHandEvaluation.h>
 
 const unsigned int BOARD_SIZE = 5;
 
@@ -76,7 +77,7 @@ namespace pokerstove
          * - 'e'    stud/8
          * - 'b'    badugi
          */
-        typedef boost::shared_ptr<PokerHandEvaluator> eval_ptr;
+        typedef std::shared_ptr<PokerHandEvaluator> eval_ptr;
         static eval_ptr alloc(const std::string& strid);
 
         /**

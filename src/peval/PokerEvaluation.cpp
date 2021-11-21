@@ -3,14 +3,15 @@
  * $Id: PokerEvaluation.cpp 2649 2012-06-30 04:53:24Z prock $
  */
 
-#include <iostream>
-#include <stdexcept>
-
-#include <boost/format.hpp>
 #include <pokerstove/peval/Card.h>
 #include <pokerstove/peval/PokerEvaluation.h>
 #include <pokerstove/peval/PokerEvaluationTables.h>
 #include <pokerstove/util/lastbit.h>
+
+#include <iostream>
+#include <stdexcept>
+
+#include <boost/format.hpp>
 
 using namespace std;
 using namespace pokerstove;

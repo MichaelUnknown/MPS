@@ -5,11 +5,11 @@
 #ifndef PEVAL_POKERHAND_H_
 #define PEVAL_POKERHAND_H_
 
-#include <array>
-#include <iostream>
-
 #include <pokerstove/peval/Card.h>
 #include <pokerstove/peval/CardSet.h>
+
+#include <array>
+#include <iostream>
 
 #define MUTABLE
 

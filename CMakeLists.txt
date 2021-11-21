@@ -33,7 +33,12 @@ CPMAddPackage("gh:Orphis/boost-cmake#7f97a08b64bd5d2e53e932ddf80c40544cf45edf@1.
 CPMAddPackage("gh:cpm-cmake/CPMLicenses.cmake@0.0.5")
 # PackageProject.cmake will be used to make our project installable
 CPMAddPackage("gh:TheLartians/PackageProject.cmake@1.8.0")
+# fmt as stand-in until std::format is a thing
+CPMAddPackage("gh:fmtlib/fmt#7.1.3")
 
+
+# set namespace for both libraries, i.e., modern-pokerstove::peval)
+set(PROJECT_NAMESPACE ${PROJECT_NAME})
 
 # peval library
 FILE(GLOB_RECURSE src_peval CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/peval/*.cpp")
@@ -65,8 +70,9 @@ else()
 endif()
 
 
-# make installable target
-string(TOLOWER ${PROJECT_NAME}-peval/version.h VERSION_HEADER_LOCATION_PEVAL)
+# make installable targets, use the same header for both libs
+# this also adds the alias ${PROJECT_NAME}::lib to each lib
+string(TOLOWER ${PROJECT_NAME}/version.h VERSION_HEADER_LOCATION)
 packageProject(
     NAME peval
     VERSION ${PROJECT_VERSION}
@@ -74,17 +80,16 @@ packageProject(
     BINARY_DIR ${PROJECT_BINARY_DIR}
     INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include
     INCLUDE_DESTINATION include/${PROJECT_NAME}-${PROJECT_VERSION}
-    VERSION_HEADER "${VERSION_HEADER_LOCATION_PEVAL}"
-    DEPENDENCIES "boost 1.7.1"
+    VERSION_HEADER "${VERSION_HEADER_LOCATION}"
+    DEPENDENCIES "boost 1.71"
 )
-#string(TOLOWER ${PROJECT_NAME}-penum/version.h VERSION_HEADER_LOCATION_PENUM)
 #packageProject(
 #    NAME penum
 #    VERSION ${PROJECT_VERSION}
 #    NAMESPACE ${PROJECT_NAMESPACE}
 #    BINARY_DIR ${PROJECT_BINARY_DIR}
 #    INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include
-#    INCLUDE_DESTINATION include/peval-${PROJECT_VERSION}
-#    VERSION_HEADER "${VERSION_HEADER_LOCATION_PENUM}"
-#    DEPENDENCIES ""
+#    INCLUDE_DESTINATION include/${PROJECT_NAME}-${PROJECT_VERSION}
+#    VERSION_HEADER "${VERSION_HEADER_LOCATION}"
+#    DEPENDENCIES "boost 1.71"
 #)

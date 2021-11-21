@@ -3,6 +3,14 @@
  * $Id: CardSet.cpp 2649 2012-06-30 04:53:24Z prock $
  */
 
+#include <pokerstove/peval/Card.h>
+#include <pokerstove/peval/CardSet.h>
+#include <pokerstove/peval/PokerEvaluation.h>
+#include <pokerstove/peval/PokerEvaluationTables.h>
+#include <pokerstove/peval/Rank.h>
+#include <pokerstove/peval/Suit.h>
+#include <pokerstove/util/combinations.h>
+
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -16,13 +24,6 @@
 #include <boost/format.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/math/special_functions/binomial.hpp>
-#include <pokerstove/peval/Card.h>
-#include <pokerstove/peval/CardSet.h>
-#include <pokerstove/peval/PokerEvaluation.h>
-#include <pokerstove/peval/PokerEvaluationTables.h>
-#include <pokerstove/peval/Rank.h>
-#include <pokerstove/peval/Suit.h>
-#include <pokerstove/util/combinations.h>
 
 using namespace std;
 using namespace boost;

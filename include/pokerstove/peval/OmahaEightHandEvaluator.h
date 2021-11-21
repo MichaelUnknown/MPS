@@ -5,10 +5,11 @@
 #ifndef PEVAL_OMAHAEIGHTHANDEVALUATOR_H_
 #define PEVAL_OMAHAEIGHTHANDEVALUATOR_H_
 
-#include <boost/math/special_functions/binomial.hpp>
 #include <pokerstove/peval/Holdem.h>
 #include <pokerstove/peval/PokerEvaluationTables.h>
 #include <pokerstove/peval/PokerHandEvaluator.h>
+
+#include <boost/math/special_functions/binomial.hpp>
 
 inline int bottomRanks(int x, int n)
 {
