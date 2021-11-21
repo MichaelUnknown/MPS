@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 3.15 FATAL_ERROR)
 
 
 project(
-    modern-pokerstove
+    MPS
     VERSION 0.0.1
     LANGUAGES CXX
     DESCRIPTION "A PokerStove revamp with modern C++ and better cmake."
@@ -15,8 +15,8 @@ project(
 
 
 # project options, these are off by default to not install gtest, propagate -Wpedantic etc.
-option(MODERNPOKERSTOVE_BUILD_EXAMPLES "Enable building the examples" OFF)
-option(MODERNPOKERSTOVE_BUILD_TESTS "Enable building the tests" OFF)
+option(MPS_BUILD_EXAMPLES "Enable building the examples" OFF)
+option(MPS_BUILD_TESTS "Enable building the tests" OFF)
 
 
 # do not allow building in-source
@@ -55,18 +55,18 @@ target_link_libraries(peval PUBLIC Boost::boost)
 
 
 # configure according to options, build examples, tests etc.
-if(MODERNPOKERSTOVE_BUILD_EXAMPLES)
-    message(STATUS "Building samples enabled")
+if(MPS_BUILD_EXAMPLES)
+    message(STATUS "MPS building samples enabled")
     add_subdirectory(example)
 else()
-    message(STATUS "Building samples DISABLED")
+    message(STATUS "MPS building samples DISABLED")
 endif()
-if(MODERNPOKERSTOVE_BUILD_TESTS)
-    message(STATUS "Testing enabled")
+if(MPS_BUILD_TESTS)
+    message(STATUS "MPS testing enabled")
     enable_testing()
     add_subdirectory(test)
 else()
-    message(STATUS "Testing DISABLED")
+    message(STATUS "MPS testing DISABLED")
 endif()
 
 

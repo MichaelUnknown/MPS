@@ -39,6 +39,11 @@ Working/tested parts of the library:
 - Suit
 - Card
 - CardSet
+- CardSetGenerators
+- PokerEvaluation
+- PokerHand
+- PokerHandEvaluator
+- PokerHandEvaluator_Alloc
 
 ### penum
 
@@ -62,7 +67,7 @@ CPMAddPackage("gh:MichaelUnknown/MPS@0.0.1")
 add_executable(MyPokerApp MyPokerApp.cpp MoreSources.cpp ...)
 
 # 'link' against the lib
-target_link_libraries(MyPokerApp modern-pokerstove::peval)
+target_link_libraries(MyPokerApp MPS::peval)
 ```
 
 ### Dependencies
@@ -70,8 +75,24 @@ target_link_libraries(MyPokerApp modern-pokerstove::peval)
 [Google test](https://github.com/google/googletest) is used for unit tests, [CPM.cmake](https://github.com/cpm-cmake/CPM.cmake) for
 adding dependendcies and [PackageProject.cmake](https://github.com/TheLartians/PackageProject.cmake) to make the project easily installable.
 
+### Windows
 
-## Programs
+Win...
+
+### Linux/macOS
+
+Linux...
+```bash
+~$ git clone https://github.com/MichaelUnknown/MPS
+~$: cd MPS
+```
+Build type can be `Debug`,`Release` etc.
+```bash
+~/MPS$ cmake -S . -B build D CMAKE_BUILD_TYPE=Debug -D MPS_BUILD_EXAMPLES=ON -D MPS_BUILD_TESTS=ON 
+~/MPS$ cmake --build build
+```
+
+## Examples
 
 ### ps-eval
 
