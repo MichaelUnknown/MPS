@@ -10,7 +10,7 @@ project(
     modern-pokerstove
     VERSION 0.1.0
     LANGUAGES CXX
-    DESCRIPTION "A PokerStove revamp with modern cmake and C++."
+    DESCRIPTION "A PokerStove revamp with modern C++ and better cmake."
 )
 
 
@@ -37,7 +37,7 @@ CPMAddPackage("gh:TheLartians/PackageProject.cmake@1.8.0")
 CPMAddPackage("gh:fmtlib/fmt#7.1.3")
 
 
-# set namespace for both libraries, i.e., modern-pokerstove::peval)
+# set namespace for both libraries, i.e., modern-pokerstove::peval, modern-pokerstove::penum)
 set(PROJECT_NAMESPACE ${PROJECT_NAME})
 
 # peval library

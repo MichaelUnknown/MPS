@@ -1,12 +1,14 @@
 PokerStove (modernized)
 ==========
 
-This is a PokerStove revamp that removes unnecessary dependencies from the original project and
-provides easy-to-use integration as library via [CPM.cmake](https://github.com/cpm-cmake/CPM.cmake).
+This is a PokerStove revamp that restructred the project to a modern layout and provides easy-to-use integration
+as library via [CPM.cmake](https://github.com/cpm-cmake/CPM.cmake) which also auto-includes all dependencies
+(most importantly `Boost`, which still doesn't provide good cmake integration yet...).
 
-Some more info...
+Some more info about any changes...
 
 This project provides just the C++ source code. For the installer of the Win32 GUI, see the original [repository](https://github.com/andrewprock/pokerstove).
+
 
 ## Original documentation
 
@@ -22,6 +24,7 @@ Please find the old installer in the win32 directory.  That installer should
 install a version of PokerStove which will not expire at any time.  You can also
 find the apk file for the Android version of the utility in the android folder.
 
+
 ## Libraries
 
 ### peval
@@ -30,6 +33,10 @@ This is a c++ poker hand evaluation library.  The main design goals of the libra
 are generality, extensibility, and ease of use.  There are evaluators for fourteen
 variants of poker.  Additionally, there are various card manipulation and query tools built
 into the CardSet class.
+
+### penum
+
+Tbd...
 
 
 ## Building
@@ -40,24 +47,19 @@ tweaking.
 
 In order to build the libraries, use CPM.cmake to include the library, then link against it:
 ```cmake
-CPMAddPackage(
-    NAME mkpoker
-    GITHUB_REPOSITORY MichaelUnknown/mkpoker
-    VERSION 0.x
-)
+CPMAddPackage("gh:MichaelUnknown/modern-pokerstove@2.0.0")
+
 # define your executable
 add_executable(MyPokerApp MyPokerApp.cpp MoreSources.cpp ...)
 
-# 'link' against mkpoker like this
-target_link_libraries(MyPokerApp mkpoker::mkpoker)
+# 'link' against the lib
+target_link_libraries(MyPokerApp modern-pokerstove::peval)
 ```
-
 
 ### Dependencies
 
-Google test is used for unit tests, [CPM.cmake](https://github.com/cpm-cmake/CPM.cmake) for
-adding dependendcies and [PackageProject.cmake](https://github.com/TheLartians/PackageProject.cmake) to create an installable object.
-
+[Google test](https://github.com/google/googletest) is used for unit tests, [CPM.cmake](https://github.com/cpm-cmake/CPM.cmake) for
+adding dependendcies and [PackageProject.cmake](https://github.com/TheLartians/PackageProject.cmake) to make the project easily installable.
 
 
 ## Programs
@@ -70,4 +72,3 @@ evaluators for the different variants of poker.
 ### ps-colex
 
 A utility for viewing colexicographical index for sets of cards.
-
