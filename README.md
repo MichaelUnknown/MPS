@@ -34,9 +34,18 @@ are generality, extensibility, and ease of use.  There are evaluators for fourte
 variants of poker.  Additionally, there are various card manipulation and query tools built
 into the CardSet class.
 
+Working/tested parts of the library:
+- Rank
+- Suit
+- Card
+- CardSet
+
 ### penum
 
 Tbd...
+
+Working/tested parts of the library:
+- None yet
 
 
 ## Building
@@ -47,7 +56,7 @@ tweaking.
 
 In order to build the libraries, use CPM.cmake to include the library, then link against it:
 ```cmake
-CPMAddPackage("gh:MichaelUnknown/modern-pokerstove@2.0.0")
+CPMAddPackage("gh:MichaelUnknown/MPS@0.0.1")
 
 # define your executable
 add_executable(MyPokerApp MyPokerApp.cpp MoreSources.cpp ...)
